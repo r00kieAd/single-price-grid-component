@@ -1,0 +1,128 @@
+.karla-font {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  background-color: hsl(204, 43%, 93%);
+}
+
+#main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35rem;
+  font-size: 15px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+@media screen and (max-width: 600px) {
+  #main {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 99%;
+  }
+}
+#main .grid1 {
+  display: grid;
+  grid-template-columns: 35rem;
+}
+@media screen and (max-width: 600px) {
+  #main .grid1 {
+    grid-template-columns: auto;
+    width: 100%;
+  }
+}
+#main .grid1 .row1 .content1 {
+  border-radius: 8px 8px 0 0;
+  background-color: white;
+  padding: 10px 30px;
+}
+#main .grid1 .row1 .content1 .h1,
+#main .grid1 .row1 .content1 .h2 {
+  font-size: 17px;
+}
+#main .grid1 .row1 .content1 .h1 {
+  color: hsl(179, 62%, 43%);
+}
+#main .grid1 .row1 .content1 .h2 {
+  color: hsl(71, 73%, 54%);
+}
+#main .grid1 .row1 .content1 .p1 {
+  color: hsl(218, 22%, 67%);
+}
+#main .grid1 .grid2 {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  background-color: hsl(179, 62%, 43%);
+  color: white;
+  width: auto;
+  overflow: hidden;
+  border-radius: 0 0 8px 8px;
+}
+@media screen and (max-width: 600px) {
+  #main .grid1 .grid2 {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    width: inherit;
+  }
+}
+#main .grid1 .grid2 .col1 {
+  width: auto;
+  padding: 25px;
+  position: relative;
+}
+@media screen and (max-width: 600px) {
+  #main .grid1 .grid2 .col1 {
+    padding: 20px;
+    width: auto;
+  }
+}
+#main .grid1 .grid2 .col1 .content2 .price {
+  display: flex;
+  align-items: center;
+}
+#main .grid1 .grid2 .col1 .content2 .price .value {
+  font-size: 25px;
+}
+#main .grid1 .grid2 .col1 .content2 .price .unit {
+  font-size: 13px;
+  opacity: 0.6;
+}
+#main .grid1 .grid2 .col1 .content2 .p2 {
+  opacity: 0.8;
+  font-size: 13px;
+  line-height: 25px;
+  margin: 0;
+}
+#main .grid1 .grid2 .col1 .content2 .sign-up {
+  width: 100%;
+  height: 40px;
+  margin-top: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(71, 73%, 54%);
+  color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+}
+#main .grid1 .grid2 .col2 {
+  padding: 30px;
+  background-color: #2fc6c4;
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  #main .grid1 .grid2 .col2 {
+    padding: 20px;
+    width: auto;
+  }
+}
+#main .grid1 .grid2 .col2 .points .p {
+  font-size: 12px;
+  opacity: 0.6;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,156 @@
+$cyan: hsl(179, 62%, 43%);
+$bright-yellow: hsl(71, 73%, 54%);
+$light-gray: hsl(204, 43%, 93%);
+$grayish-blue: hsl(218, 22%, 67%);
+$main-width: 35rem;
+$main-font-size: 15px;
+$heading-font-size: calc($main-font-size + 2px);
+
+.karla-font {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    background-color: $light-gray;
+}
+
+#main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: $main-width;
+    font-size: $main-font-size;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    @media screen and (max-width: 600px) {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 99%;
+        // border: 1px solid black;
+    }
+
+    .grid1 {
+        display: grid;
+        grid-template-columns: $main-width;
+
+        @media screen and (max-width: 600px) {
+            grid-template-columns: auto;
+            width: 100%;
+        }
+
+        .row1 {
+            .content1 {
+                border-radius: 8px 8px 0 0;
+                background-color: white;
+                padding: 10px 30px;
+
+                .h1,
+                .h2 {
+                    font-size: $heading-font-size;
+                }
+
+                .h1 {
+                    color: $cyan;
+                }
+
+                .h2 {
+                    color: $bright-yellow;
+                }
+
+                .p1 {
+                    color: $grayish-blue;
+                }
+            }
+        }
+
+        .grid2 {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto;
+            background-color: $cyan;
+            color: white;
+            width: auto;
+            overflow: hidden;
+            border-radius: 0 0 8px 8px;
+
+            @media screen and (max-width: 600px) {
+                grid-template-columns: auto;
+                grid-template-rows: auto auto;
+                width: inherit;
+            }
+
+            .col1 {
+                width: auto;
+                padding: 25px;
+                position: relative;
+
+                @media screen and (max-width: 600px) {
+                    padding: 20px;
+                    width: auto;
+                }
+
+                .content2 {
+
+                    .price {
+                        display: flex;
+                        align-items: center;
+
+                        .value {
+                            font-size: calc($main-font-size + 10px);
+                        }
+
+                        .unit {
+                            font-size: calc($main-font-size - 2px);
+                            opacity: 0.6;
+                        }
+                    }
+
+                    .p2 {
+                        opacity: 0.8;
+                        font-size: calc($main-font-size - 2px);
+                        line-height: 25px;
+                        margin: 0;
+                    }
+
+                    .sign-up {
+                        width: 100%;
+                        height: 40px;
+                        margin-top: 35px;
+                        border: none;
+                        border-radius: 5px;
+                        background-color: $bright-yellow;
+                        color: white;
+                        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .col2 {
+                padding: 30px;
+                $lighter-color: lighten($cyan, 5%);
+                background-color: $lighter-color;
+                width: 100%;
+
+                @media screen and (max-width: 600px) {
+                    padding: 20px;
+                    width: auto;
+                }
+
+                .points {
+                    .p {
+                        font-size: calc($main-font-size - 3px);
+                        opacity: 0.6;
+                    }
+                }
+            }
+
+        }
+    }
+}
